@@ -55,7 +55,7 @@ jobs:
       #
       # ALTERNATIVE: if your GitHub Release name is the PyPI project version string
       # ALTERNATIVE: exactly, uncomment the following line instead:
-      url: https://test.pypi.org/project/sample-ptc/${{ github.event.release.name }}
+      url: https://test.pypi.org/simple/sample-ptc/${{ github.ref_name }}
 
     steps:
       - name: Retrieve release distributions
