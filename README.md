@@ -166,3 +166,9 @@ python -m pip install -e .
 If you want, I can make a **ready-to-use template project** with `setup.py`, `pyproject.toml`, tests, and GitHub Actions for CI/CD → automatically push to PyPI.
 
 Do you want me to do that?
+
+
+```bash
+bump2version patch   # or minor / major
+
+```

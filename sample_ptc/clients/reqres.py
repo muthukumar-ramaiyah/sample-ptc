@@ -25,3 +25,16 @@ class ReqResClient:
         else:
             response.raise_for_status()
 
+    @staticmethod
+    def update_user(user_id, name=None, job=None):
+        payload = {}
+        if name:
+            payload["name"] = name
+        if job:
+            payload["job"] = job
+
+        response = requests.put(f"{ReqResClient.BASE_URL}/users/{user_id}", json=payload, headers=ReqResClient.HEADERS)
+        if response.status_code == 200:
+            return response.json()
+        else:
+            response.raise_for_status()

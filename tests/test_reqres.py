@@ -22,3 +22,12 @@ def test_create_user_success():
     assert user_data['job'] == job
     assert 'id' in user_data
     assert 'createdAt' in user_data
+
+def test_update_user_success():
+    user_id = 2
+    name = "Jane Doe"
+    job = "Product Manager"
+    user_data = ReqResClient.update_user(user_id, name=name, job=job)
+    assert user_data['name'] == name
+    assert user_data['job'] == job
+    assert 'updatedAt' in user_data
