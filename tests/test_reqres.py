@@ -13,3 +13,12 @@ def test_get_user_success():
     assert 'email' in user_data['data']
     assert 'first_name' in user_data['data']
     assert 'last_name' in user_data['data']
+
+def test_create_user_success():
+    name = "John Doe"
+    job = "Software Developer"
+    user_data = ReqResClient.create_user(name, job)
+    assert user_data['name'] == name
+    assert user_data['job'] == job
+    assert 'id' in user_data
+    assert 'createdAt' in user_data

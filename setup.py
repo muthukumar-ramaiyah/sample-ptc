@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="sample_ptc",          # package name
-    version="0.1.5",           # version
+    version="0.1.6",           # version
     author="Your Name",
     author_email="you@example.com",
     description="A sample Python package",
